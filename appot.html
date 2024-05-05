@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>appointment</title>
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  .first{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: space-between;
+
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  h2 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+  }
+  .city{
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  label {
+    font-size: 1.2em;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  select,
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  select option {
+    background-color: #f9f9f9;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+  }
+
+  .ma{
+    border: #333 1px solid;
+    padding: 30px;
+    justify-content: center;
+  }
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  
+    input[type="text"] {
+      width: 100%;
+
+    }
+  
+    button[type="submit"] {
+      width: 20%;
+      margin: 10px;
+    }
+    .simp{
+      color: #45a049;
+    }
+    .re{
+      border: #333 1px solid;
+      padding: 20px;
+    }
+  
+</style>
+
+<body>
+  <h1>Find Doctors</h1>
+  <p>All Cities</p>
+  <div class="first">
+    <form action="/search" method="get">
+    <input type="text" name="q" placeholder="Search Doctors, Specialties, Symptoms, Hospitals etc.">
+    <button class="bt" type="submit">Search</button>
+  </form>
+  </div>
+  <h2>Most Searched Cities</h2>
+<div class="city"> 
+   <ul>
+  <li>New Delhi</li>
+  <li>Hyderabad</li>
+  <li>Chennai</li>
+  <li>Kolkata</li>
+  <li>Mumbai</li>
+  <li>Bangalore</li>
+</ul>
+</div>
+
+
+
+<div class="ma">
+  <h1>Book an Appointment in <p2 class="simp">3 Simple Steps</p2> </h1>
+    <form action="/appointment" method="post">
+   <div class="re">
+    <label for="location">Preferred Location/Pincode:</label>
+    <input type="text" id="location" name="location" required>
+   </div>
+
+  <div class="re">
+    <label for="speciality">Select Speciality:</label>
+    <select id="speciality" name="speciality" required>
+      <option value="">Select Speciality</option>
+      <option value="cardiology">Cardiology</option>
+      <option value="dermatology">Dermatology</option>
+      <option value="gastroenterology">Gastroenterology</option>
+      <option value="neurology">Neurology</option>
+      <option value="orthopedics">Orthopedics</option>
+    </select>
+  </div>
+
+  <div class="re">
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" name="date" required>
+  </div>
+</form>
+<button type="submit"><a href="details.html">One last move</a></button>
+</div>
+
+
+</body>
+</html>
